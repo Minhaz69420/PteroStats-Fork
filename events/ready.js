@@ -17,6 +17,15 @@ module.exports = client => {
   let ch = client.channels.cache.find(cn => cn.id === config.channel)
   let time = config.refreshtime
 
+  //Some extra variables for the embed
+  let author = config.embed.author;
+  let authorImageURL = config.embed.authorImageURL;
+  let imageURL = config.embed.imageURL;
+  let thumbnailURL = config.embed.thumbnailURL;
+  let footerImageURL = config.embed.footerImageURL;
+  let monitorLink = config.monitorLink
+  //----------------------------------------------------------------------
+
   let hosturl = config.panel.url
   let adminapikey = config.panel.adminkey
 
@@ -246,9 +255,9 @@ module.exports = client => {
         console.log(chalk.cyan('[PteroStats Checker] ') + chalk.red('panel is down!'))
       }
       if (userCount === checking) paneltable.set('panel', `**[Panel](${panelURL})**: ` + checking)
-      let panel = paneltable.get('panel') + '\n\nUsers: `' + userCount + '`\nServers: ' + serverCount
+      let panel = paneltable.get('panel') + '\n\nUsers: `' + userCount + '`\nServers: `' + serverCount + '`'
 
-      if (panel === null) panel = `**[Panel](${panelURL})**: ` + checking + '\n\nUsers: `' + userCount + '`\nServers: ' + serverCount
+      if (panel === null) panel = `**[Panel](${panelURL})**: ` + checking + '\n\nUsers: `' + userCount + '`\nServers: `' + serverCount + '`'
 
       let nodes
       list.forEach((d) => {
@@ -269,20 +278,20 @@ module.exports = client => {
       if (enablef === true) embedfooter = 'Updated every ' + time + ' seconds | ' + footer
 
       let embed = new MessageEmbed()
-        .setAuthor("ShreshthTiwari#6014", "https://cdn.discordapp.com/attachments/821456528993026108/908286324811902987/OwO.gif")
+        .setAuthor(author, authorImageURL)
         .setTitle(title)
         .setColor(color)
         .addField('Panel Stats', panel)
-        .setImage("https://cdn.discordapp.com/attachments/821456528993026108/908286324811902987/OwO.gif")
-        .setFooter(embedfooter)
-        .setThumbnail("https://cdn.discordapp.com/attachments/821456528993026108/908286324811902987/OwO.gif")
+        .setImage(imageURL)
+        .setFooter(embedfooter, footerImageURL)
+        .setThumbnail(thumbnailURL)
       if (enablets === true) {
         embed.setTimestamp()
       }
       if (enabledesc === true) {
-        embed.setDescription(desc + '\n**[Nodes Stats' + nodeCount + '](https://hetrixtools.com/r/20ec88bda1596da56818612b1d96dcdd/)**\n' + nodes)
+        embed.setDescription(desc + `\n**[Nodes Stats](${monitorLink})** **` + nodeCount + '**\n' + nodes)
       } else {
-        embed.setDescription('\n**[Nodes Stats' + nodeCount + '](https://hetrixtools.com/r/20ec88bda1596da56818612b1d96dcdd/)**\n' + nodes)
+        embed.setDescription(`\n**[Nodes Stats](${monitorLink})** **` + nodeCount + '**\n' + nodes)
       }
 
       let messages = await ch.messages.fetch({limit: 10})
