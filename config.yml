@@ -2,40 +2,40 @@
 # If you need help, join our discord server here: https://discord.gg/zv6maQRah3
 
 # Bot Info's
-token: 'ODgzMzUxNDQwNzAwMDgwMTM5.YTIrIw.0XR8gRi-sjw1XsirnYvMplj17kY' # Put bot token here, check https://discord.dev to create and get bot token
+token: '' # Put bot token here, check https://discord.dev to create and get bot token
 botstatus:
   enable: false # Enable Custom Status (MUST BE "true" OR "false")
-  text: 'Aasgard Connect' # Bot Status Message
-  type: 'WATCHING' # Bot Status Type. Ex: PLAYING, WATCHING, LISTENING, STREAMING
+  text: '' # Bot Status Message
+  type: '' # Bot Status Type. Ex: PLAYING, WATCHING, LISTENING, STREAMING
 
 # Channel and RefreshTime Configuration
-channel: '907929760414441512' # Put channel id here where the embed will be sended
+channel: '' # Put channel id here where the embed will be sended
 refreshtime: 10 # Time when the embed edited/refreshed (MUST BE A SECONDS) (RECOMMENDED MORE THAN 20 SECONDS)
 
 # Uptime Monitor
-monitorLink: 'https://hetrixtools.com/r/20ec88bda1596da56818612b1d96dcdd/'
+monitorLink: '' # url of the node uptime monitor page
 
 # Panel Info's
 panel:
-  url: 'https://panel.aasgard.in' # Put panel url here. Example: https://panel.purenodes.net
-  adminkey: 'bXROAnTqn2WSgoAKPD1KGcMBAjzeQSfUPh0EVE7gKRU8CDc5' # Put Admin Apikey here. check https://your.host.url/admin/api (your.host.url is an example link) to get the Admin ApiKey
+  url: '' # Put panel url here. Example: https://panel.purenodes.net
+  adminkey: '' # Put Admin Apikey here. check https://your.host.url/admin/api (your.host.url is an example link) to get the Admin ApiKey
 
 # Embed Configuration
 embed: 
-  author: 'ShreshthTiwari#6014' # Embed Author Name. Ex- ShreshthTiwari
-  authorImageURL: 'https://cdn.discordapp.com/attachments/821456528993026108/908286324811902987/OwO.gif' # Embed Author image
-  title: 'Aasgard Connect' # Embed Title here. Ex: PureNodes Stats
-  color: 'E5BE11' # Embed Hex color here.
-  imageURL: 'https://cdn.discordapp.com/attachments/821456528993026108/908286324811902987/OwO.gif' # Embed image url.
-  thumbnailURL: 'https://cdn.discordapp.com/attachments/821456528993026108/908286324811902987/OwO.gif' # Embed thumbnail url.
+  author: '' # Embed Author Name. Ex- ShreshthTiwari
+  authorImageURL: '' # Embed Author image
+  title: '' # Embed Title here. Ex: PureNodes Stats
+  color: '' # Embed color here. Ex: YELLOW
+  imageURL: '' # Embed image url.
+  thumbnailURL: '' # Embed thumbnail url.
   description: 
     enable: false # Enable Embed Description (MUST BE "true" OR "false")
-    text: 'EMBED DESCRIPTION' # Embed Description
+    text: '' # Embed Description
   footer: 
     enable: false # Enable Embed Footer (MUST BE "true" OR "false")
-    text: 'By Hirzi#8701' # Embed Footer
+    text: '' # Embed Footer
   timestamp: true # Enable Embed TimeStamp (MUST BE "true" OR "false")
-  footerImageURL: 'https://cdn.discordapp.com/attachments/821456528993026108/908286324811902987/OwO.gif' # Embed footer image url.
+  footerImageURL: '' # Embed footer image url.
 
 # Status Message Configuration
 status:
